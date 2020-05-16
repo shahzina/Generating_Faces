@@ -31,4 +31,9 @@ We also scale our images as they are currently between 0 and 1 while the generat
 ![generated images](https://github.com/shahzina/Generating_Faces/blob/master/img_dcgan/generated%20images.png)
 
 
-## Comments on Final Results <br> 
+## Comments on Final Results: <br> 
+The generated images resemble normal human faces but many features need work and need to be learnt better by the model. Building a deeper model will help in better learning the features. Non-celebrity faces can also be added to the dataset with proportional representation of most or major ethnic groups. <br>
+
+The model can also be trained for more number of epochs, but if the model is deep enough, 50 epochs is a good enough number for it to learn. <br> 
+
+Normalization techniques can also be used for better image resolution. <br>
