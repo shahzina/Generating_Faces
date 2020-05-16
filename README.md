@@ -25,8 +25,10 @@ We also scale our images as they are currently between 0 and 1 while the generat
 ### 6- Define Loss Functions and Optimizers <br> 
 
 ### 7- Train <br> 
+![training loss](https://github.com/shahzina/Generating_Faces/blob/master/img_dcgan/training%20loss.png)
 
 ### 8- Display Samples <br>
+![generated images](https://github.com/shahzina/Generating_Faces/blob/master/img_dcgan/generated%20images.png)
 
 
 ## Comments on Final Results <br> 
