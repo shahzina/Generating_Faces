@@ -20,3 +20,6 @@ GANs or Generative Adversarial Networks are generative models that generate imag
 ### 7- Train <br> 
 
 ### 8- Display Samples <br>
+
+
+## Comments on Final Results <br> 
