@@ -9,7 +9,7 @@ GANs or Generative Adversarial Networks are generative models that generate imag
 Some pre-processing has already been done in the given dataset while a lot more needed to be done. We start by defining our **get_dataloader** function which returns a data loader after applying various transformations. <br>
 
 First, we define our transformations we want to apply using the *transforms.Compose* method provided by PyTorch. Here, we have resized our image to *image_size* which we have assigned a value of 32 and then converted this Numpy image to a Tensor. <br>
-Then we use the ImageFolder wrapper to create a dataset and apply the defined transformations. The ImageFolder wrapper is used here to create a dataset of the directory of images. <br> 
+Then we use the *ImageFolder* wrapper to create a dataset and apply the defined transformations. The ImageFolder wrapper is used here to create a dataset of the directory of images. <br> 
 Then we create our data loader using PyTorch's *DataLoader* and pass in our transformed dataset and batch size and shuffle values. <br> 
 
 We also scale our images as they are currently between 0 and 1 while the generator will yield images between -1 and 1 because a tanh activation is applied to the output layer of a generator. <br>
