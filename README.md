@@ -31,7 +31,10 @@ The weights have been initialized as described in the [original DCGAN paper](htt
 
 The weight initialization function has been defined as shown in the [PyTorch DCGAN tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#weight-initialization) <br>
 
-### 5- Building the complete model <br> 
+### 5- Building the complete network <br> 
+Here we build our DCGAN model by instantiating the Discriminator and Generator classes previously defined and then applying initial weights using the *weights_init_normal* function. <br>
+
+We also define the model hyperparameters here. <br>
 
 ### 6- Define Loss Functions and Optimizers <br> 
 
