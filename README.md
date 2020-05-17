@@ -37,6 +37,24 @@ Here we build our DCGAN model by instantiating the Discriminator and Generator c
 We also define the model hyperparameters here. <br>
 
 ### 6- Define Loss Functions and Optimizers <br> 
+We use two kinds of loss, real loss and fake loss. For real loss, we compare the output of our discriminator to labels that we have already defined which will be either ones or if we choose to smooth them they will be 0.9. Similarly for fake loss, we compare the output of the discriminator with labels that are set to zero. <br>
+
+The code block: <br>
+``` python
+if smooth:
+        # smooth, real labels = 0.9
+        labels = torch.ones(batch_size)*0.9
+    else:
+        labels = torch.ones(batch_size)
+```
+sets the ground truth labels to be equal to 1 in case of real loss and the code, <br>
+
+``` python
+labels = torch.zeros(batch_size)
+```
+sets the labels to 0. <br>
+
+The loss function we use is BCEWithLogitsLoss().
 
 ### 7- Train <br> 
 ![training loss](https://github.com/shahzina/Generating_Faces/blob/master/img_dcgan/training%20loss.png)
