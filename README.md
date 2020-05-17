@@ -19,7 +19,12 @@ The discriminator, as the name suggests, discriminates between the images, meani
 
 The discriminator is a convolutional neural network with one fully connected layer at the end. It takes in an image and determines whether it is real or fake. This convolutional network, unlike others, does not have a maxpooling layer and the downsizing is done using a stride of 2. It does however use batch normalization in some layers and a leaky relu activation. Leaky relu prevents the nodes of a neural network from dying during dropout and batch normalization scales the layer's output to have a mean of 0 and variance of 1 (defined in the *weights_init_normal* function later. This helps the network train faster. <br> 
 
+When training a discriminator, half the time it is trained on real images and the other half on fake images so that it learns to know the difference between both and output the correct probability. <br>
+
 ### 3- Model Definition - Generator <br> 
+As suggested by the name, the generator generates realistic fake images. The aim of the generator is to fool the discriminator into predicting that the generated image is real instead of fake.It does this by understanding and learning the underlying structure of the training data. <br>
+
+The generator model is a transposed convolutional model, meaning it starts with the fully connected layer and works it's way to a bigger image of desired size. It takes in a vector z which is filled with random noise values and it's task is to map this random noise to an output x. This mapping is done based on what the generator learns from the training data. In our model we start with a fully connected layer and move to convolutional layers with a stride of 2, therefore, each image is upsampled by 2 in every layer and the depth is decreasing. The last layer does not use any leaky relu or batch normalization, instead we apply a tanh activation function. <br>
 
 ### 4- Weight Initialization <br>
 
