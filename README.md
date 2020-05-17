@@ -27,6 +27,9 @@ As suggested by the name, the generator generates realistic fake images. The aim
 The generator model is a transposed convolutional model, meaning it starts with the fully connected layer and works it's way to a bigger image of desired size. It takes in a vector z which is filled with random noise values and it's task is to map this random noise to an output x. This mapping is done based on what the generator learns from the training data. In our model we start with a fully connected layer and move to convolutional layers with a stride of 2, therefore, each image is upsampled by 2 in every layer and the depth is decreasing. The last layer does not use any leaky relu or batch normalization, instead we apply a tanh activation function. <br>
 
 ### 4- Weight Initialization <br>
+The weights have been initialized as described in the [original DCGAN paper](https://arxiv.org/pdf/1511.06434.pdf, i.e. from a zero-centered mean and standard deviation 0.02. The bias terms have been initialized to 0 but this is optional. <br>
+
+The weight initialization function has been defined as shown in the [PyTorch DCGAN tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#weight-initialization) <br>
 
 ### 5- Building the complete model <br> 
 
