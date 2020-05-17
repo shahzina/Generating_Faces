@@ -56,6 +56,11 @@ sets the labels to 0. <br>
 
 The loss function we use is BCEWithLogitsLoss().
 
+**Defining Optimizers:** <br>
+We use the Adam optimizer and define one optimizer for generator and one for discriminator because they are trained separately. We also set their hyperparameters here. Important thing to note is that DCGANs are very sensitive to hyperparameters to one should be very careful while choosing them. In the original paper the learning rate has been reduced to 0.0002 instead of the suggested and default value of 0.01 which was found to be very high. The momentum or beta one has also been reduced from a suggested 0.9 to 0.5 <br> 
+
+These exact values may not work for us, but we can begin here and change as we proceed depending on our model performance. <br> 
+
 ### 7- Train <br> 
 ![training loss](https://github.com/shahzina/Generating_Faces/blob/master/img_dcgan/training%20loss.png)
 
